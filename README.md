@@ -321,7 +321,7 @@ sudo apt-get install mongodb
 Confirm the installation with the following command:
 
 ```sh
-mongod --version
+mongodb --version
 ```
 
 ## Resources
