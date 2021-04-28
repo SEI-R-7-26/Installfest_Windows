@@ -230,6 +230,12 @@ Select this option and reconfirm the `code .` command in your terminal.
 
 NodeJS is a runtime environment that allows us to run JavaScript outside of a browser.
 
+First we'll update the apt sources for the latest node version:
+
+```sh
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+```
+
 To install NodeJS, run the following command in your terminal:
 
 ```sh
@@ -284,6 +290,14 @@ Confirm the installation with the following command:
 npm --version
 ```
 
+Change the persmissions for the npm folder:
+
+```sh
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
+```
+
 ## Installing PostgreSQL
 
 PostgreSQL is going to be our relational database of choice for this course. Install it by running the following command in your terminal:
@@ -302,6 +316,24 @@ To start the postgres service, enter the following command in your terminal:
 
 ```sh
 sudo service postgresql start
+```
+
+Enter the postgres shell as an admin:
+
+```sh
+sudo –i –u postgres psql
+```
+
+Next we'll create a SUPER USER:
+
+```sh
+CREATE USER <your linux username> WITH SUPERUSER LOGIN;
+```
+
+To exit the shell:
+
+```sh
+\q
 ```
 
 Once postgres starts, enter the following command in your terminal, replacing "whoami" with your own name:
