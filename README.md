@@ -321,7 +321,7 @@ sudo service postgresql start
 Enter the postgres shell as an admin:
 
 ```sh
-sudo –i –u postgres psql
+sudo -u postgres psql
 ```
 
 Next we'll create a SUPER USER:
