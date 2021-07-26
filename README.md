@@ -248,6 +248,24 @@ Confirm the installation with the following command:
 node --version
 ```
 
+### Confirming NPM Installation
+
+`npm` comes with nodejs, however we need to confirm that it was installed correctly.
+
+Confirm the installation with the following command:
+
+```sh
+npm --version
+```
+
+Change the persmissions for the npm folder:
+
+```sh
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
+```
+
 ## Installing Python3
 
 We'll be learning the Python language later on in this course.
@@ -272,30 +290,6 @@ Enter the following command in your terminal to install the Heroku CLI:
 
 ```sh
 curl https://cli-assets.heroku.com/install.sh | sh
-```
-
-### Installing npm
-
-**npm** is a package manager for node. It will allow us to install 3rd party packages throughout the course.
-
-To install npm, run the following command in your terminal:
-
-```sh
-sudo apt install npm
-```
-
-Confirm the installation with the following command:
-
-```sh
-npm --version
-```
-
-Change the persmissions for the npm folder:
-
-```sh
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
 ```
 
 ## Installing PostgreSQL
