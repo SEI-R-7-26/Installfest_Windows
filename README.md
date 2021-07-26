@@ -245,7 +245,7 @@ sudo apt install nodejs
 Confirm the installation with the following command:
 
 ```sh
-nodejs --version
+node --version
 ```
 
 ## Installing Python3
